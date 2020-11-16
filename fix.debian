@@ -5,6 +5,4 @@ set -x
 sudo mkdir -p /usr/local/lib/fakexrandr
 
 # Create reference
-sudo cat << EOF >> /etc/ld.so.conf.d/00000.conf
-/usr/local/lib/fakexrandr
-EOF
+sudo bash -c 'echo /usr/local/lib/fakexrandr > /etc/ld.so.conf.d/00000.conf'
