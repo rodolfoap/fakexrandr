@@ -27,7 +27,7 @@ fi
 REAL_LIBRARY_DIR=$(dirname "${REAL_LIBRARY}")
 
 # 3) Determine location for fake xrandr library
-LIBRARY_DIRECTORIES=($(ldconfig -v 2>/dev/null | grep -oE '^/[^:]+'))
+LIBRARY_DIRECTORIES=($(sudo ldconfig -v 2>/dev/null | grep -oE '^/[^:]+'))
 FAKE_LIBRARY_DIRECTORY=
 CANDIDATES=
 for DIR in ${LIBRARY_DIRECTORIES[@]}; do

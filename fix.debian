@@ -1,0 +1,10 @@
+#!/bin/bash
+set -x
+
+# Create target
+sudo mkdir -p /usr/local/lib/fakexrandr
+
+# Create reference
+sudo cat << EOF >> /etc/ld.so.conf.d/00000.conf
+/usr/local/lib/fakexrandr
+EOF

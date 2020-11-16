@@ -1,0 +1,5 @@
+config.h
+libXinerama.so.1
+libXrandr.so
+libXrandr.so.2
+skeleton.h
